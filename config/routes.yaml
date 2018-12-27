@@ -1,3 +1,19 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+presence:
+    path: /presence
+    controller: App\Controller\PresenceController::index
+
+advance:
+    path: /advance
+    controller: App\Controller\PresenceController::index
+
+employee:
+    path: /employee
+    controller: App\Controller\PresenceController::index
+
+configuration:
+    path: /configuration
+    controller: App\Controller\PresenceController::index
+
+company:
+    path: /company
+    controller: App\Controller\PresenceController::index

@@ -8,5 +8,7 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+
+        {{ render(controller('App\\Controller\\ComponentController::sidebar')) }}
     </body>
 </html>

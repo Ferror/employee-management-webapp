@@ -1,0 +1,7 @@
+<div>
+    {% for link in sidebar.navigation %}
+        <div>
+            <a href="{{ path(link.route) }}">{{ link.name }}</a>
+        </div>
+    {% endfor %}
+</div>
