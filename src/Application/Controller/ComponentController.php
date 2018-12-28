@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace App\Application\Controller;
 
 use App\Domain\Sidebar\Sidebar;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

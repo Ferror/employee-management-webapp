@@ -11,8 +11,8 @@ doctrine:
             collate: utf8mb4_unicode_ci
 
         url: '%env(resolve:DATABASE_URL)%'
-        types:
-            uuid: Ramsey\Uuid\Doctrine\UuidType
+#        types:
+#            uuid: Ramsey\Uuid\Doctrine\UuidType
     orm:
         auto_generate_proxy_classes: true
         naming_strategy: doctrine.orm.naming_strategy.underscore
@@ -21,5 +21,5 @@ doctrine:
             App:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/src/Domain/Entity'
-                prefix: 'App\Domain\Entity'
+                dir: '%kernel.project_dir%/src/Domain'
+                prefix: 'App\Domain'
