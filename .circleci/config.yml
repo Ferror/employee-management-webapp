@@ -1,12 +1,7 @@
-# PHP CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-php/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/php:7.1-browsers
 
       # Specify service dependencies here if necessary
@@ -19,11 +14,9 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "composer.json" }}
-            # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
       - run: composer install -n --prefer-dist
@@ -33,6 +26,5 @@ jobs:
             - ./vendor
           key: v1-dependencies-{{ checksum "composer.json" }}
 
-      # run tests!
-      - run: php bin/phpunit
+      - run: ./bin/phpunit
       - run: ./vendor/bin/phpcs src/
