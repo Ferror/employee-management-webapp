@@ -17,3 +17,7 @@ configuration:
 company:
     path: /company
     controller: App\Application\Controller\PresenceController::index
+
+dashboard:
+    path: /dashboard
+    controller: App\Application\Controller\DashboardController::dashboard

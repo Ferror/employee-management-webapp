@@ -1,7 +1,13 @@
-<div>
+<div class="sidebar" style="width: 180px; position: fixed; height: 100vh; margin: 0 auto;">
     {% for link in sidebar.navigation %}
-        <div>
-            <a href="{{ path(link.route) }}">{{ link.name }}</a>
-        </div>
+        {% if link.name in path  %}
+            <div>
+                <a style="color: red;" href="{{ path(link.route) }}">{{ link.name }}</a>
+            </div>
+        {% else %}
+            <div>
+                <a href="{{ path(link.route) }}">{{ link.name }}</a>
+            </div>
+        {% endif %}
     {% endfor %}
 </div>

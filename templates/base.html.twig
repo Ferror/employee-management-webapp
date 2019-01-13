@@ -6,9 +6,24 @@
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {{ render(
+            controller(
+                'App\\Application\\Controller\\ComponentController::sidebar',
+                { 'path': app.request.pathInfo }
+            )
+        ) }}
 
-        {{ render(controller('App\\Controller\\ComponentController::sidebar')) }}
+        <div style="padding-left: 180px;">
+            <div style="width: 1170px; display: flex; margin: 0 auto;">
+                {% block content %}
+                    <p>asd asd asd</p>
+                    <p>asd asd asd</p>
+                    <p>asd asd asd</p>
+                    <p>asd asd asd</p>
+                {% endblock %}
+            </div>
+        </div>
+
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

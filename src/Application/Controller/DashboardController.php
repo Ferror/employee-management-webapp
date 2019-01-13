@@ -5,10 +5,10 @@ namespace App\Application\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class PresenceController extends AbstractController
+class DashboardController extends AbstractController
 {
-    public function index(): Response
+    public function dashboard(): Response
     {
-        return $this->render('employee/employee.html.twig');
+        return $this->render('dashboard.html.twig');
     }
 }

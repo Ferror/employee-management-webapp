@@ -10,7 +10,7 @@ use App\Domain\Sidebar\Link\PresenceLink;
 
 class Sidebar
 {
-    public function navigation()
+    public function navigation(): array
     {
         return [
             new EmployeeLink(),
