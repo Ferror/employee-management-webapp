@@ -1,23 +1,23 @@
-presence:
-    path: /presence
-    controller: App\Application\Controller\PresenceController::index
-
-advance:
-    path: /advance
-    controller: App\Application\Controller\PresenceController::index
-
-employee:
-    path: /employee
-    controller: App\Application\Controller\PresenceController::index
-
-configuration:
-    path: /configuration
-    controller: App\Application\Controller\PresenceController::index
-
-company:
-    path: /company
-    controller: App\Application\Controller\PresenceController::index
-
-dashboard:
-    path: /dashboard
-    controller: App\Application\Controller\DashboardController::dashboard
+#presence:
+#    path: /presence
+#    controller: App\Application\Controller\PresenceController::index
+#
+#advance:
+#    path: /advance
+#    controller: App\Application\Controller\PresenceController::index
+#
+#employee:
+#    path: /employee
+#    controller: App\Application\Controller\PresenceController::index
+#
+#configuration:
+#    path: /configuration
+#    controller: App\Application\Controller\PresenceController::index
+#
+#company:
+#    path: /company
+#    controller: App\Application\Controller\PresenceController::index
+#
+#dashboard:
+#    path: /dashboard
+#    controller: App\Application\Controller\DashboardController::dashboard

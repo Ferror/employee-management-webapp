@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Domain\Sidebar\Link;
 
-class AdvanceLink implements SidebarLink
+final class AdvanceLink implements SidebarLink
 {
     public function getName(): string
     {

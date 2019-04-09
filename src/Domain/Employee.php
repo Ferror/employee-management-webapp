@@ -1,12 +1,12 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Domain;
 
-class Employee
+final class Employee
 {
     private $name;
 
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
     }

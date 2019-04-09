@@ -1,13 +1,35 @@
 <div class="sidebar" style="width: 180px; position: fixed; height: 100vh; margin: 0 auto;">
-    {% for link in sidebar.navigation %}
-        {% if link.name in path  %}
+    <div class="sidebar__logo">
+        <img src="{{ asset(sidebar.logo.image, 'image') }}" alt="sidebar-logo">
+    </div>
+
+    <style>
+        button {
+            width: 180px;
+            background-color: #fff;
+            border: none;
+            padding: 10px 0;
+            cursor: pointer;
+            outline: none;
+            text-transform: capitalize;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        button:active {
+            background-color: #999;
+        }
+    </style>
+
+    <div class="sidebar__nav">
+        {% for link in sidebar.navigation %}
             <div>
-                <a style="color: red;" href="{{ path(link.route) }}">{{ link.name }}</a>
+                <button class="sidebar__item" id="{{ link.route }}-LINK">{{ link.name }}</button>
             </div>
-        {% else %}
-            <div>
-                <a href="{{ path(link.route) }}">{{ link.name }}</a>
-            </div>
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </div>
+
 </div>

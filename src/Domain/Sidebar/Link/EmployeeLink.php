@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Domain\Sidebar\Link;
 
-class EmployeeLink implements SidebarLink
+final class EmployeeLink implements SidebarLink
 {
     public function getName(): string
     {

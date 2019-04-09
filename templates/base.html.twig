@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('app.css', 'build') }}">
     </head>
     <body>
         {{ render(
@@ -14,16 +15,13 @@
         ) }}
 
         <div style="padding-left: 180px;">
-            <div style="width: 1170px; display: flex; margin: 0 auto;">
-                {% block content %}
-                    <p>asd asd asd</p>
-                    <p>asd asd asd</p>
-                    <p>asd asd asd</p>
-                    <p>asd asd asd</p>
-                {% endblock %}
+            <div style="width: 1170px; min-height: 100vh; display: flex; margin: 0 auto; background-color: #222">
+                <div id="content"></div>
             </div>
         </div>
 
+        <script src="{{ asset('runtime.js', 'build') }}"></script>
+        <script src="{{ asset('app.js', 'build') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

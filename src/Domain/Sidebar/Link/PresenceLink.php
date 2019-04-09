@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace App\Domain\Sidebar\Link;
 
-class PresenceLink implements SidebarLink
+final class PresenceLink implements SidebarLink
 {
     public function getName(): string
     {
@@ -11,6 +11,6 @@ class PresenceLink implements SidebarLink
 
     public function getRoute(): string
     {
-        return 'presence';
+        return 'PRESENCE';
     }
 }
