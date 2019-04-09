@@ -1,13 +1,13 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace App\Domain\Sidebar;
+namespace Domain\Sidebar;
 
-use App\Domain\Sidebar\Link\AdvanceLink;
-use App\Domain\Sidebar\Link\CompanyLink;
-use App\Domain\Sidebar\Link\ConfigurationLink;
-use App\Domain\Sidebar\Link\DashboardLink;
-use App\Domain\Sidebar\Link\EmployeeLink;
-use App\Domain\Sidebar\Link\PresenceLink;
+use Domain\Sidebar\Link\AdvanceLink;
+use Domain\Sidebar\Link\CompanyLink;
+use Domain\Sidebar\Link\ConfigurationLink;
+use Domain\Sidebar\Link\DashboardLink;
+use Domain\Sidebar\Link\EmployeeLink;
+use Domain\Sidebar\Link\PresenceLink;
 
 class Sidebar
 {
@@ -26,12 +26,12 @@ class Sidebar
     public function navigation(): array
     {
         return [
-//            new EmployeeLink(),
+            new EmployeeLink(),
             new PresenceLink(),
             new DashboardLink(),
-//            new CompanyLink(),
-//            new ConfigurationLink(),
-//            new AdvanceLink()
+            new CompanyLink(),
+            new ConfigurationLink(),
+            new AdvanceLink()
         ];
     }
 }

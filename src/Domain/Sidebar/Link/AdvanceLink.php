@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Domain\Sidebar\Link;
+namespace Domain\Sidebar\Link;
 
 final class AdvanceLink implements SidebarLink
 {

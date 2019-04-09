@@ -6,11 +6,7 @@ services:
         autowire: true
         autoconfigure: true
 
-    App\:
-        resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
-
-    App\Application\Controller\:
+    Application\Controller\:
         resource: '../src/Application/Controller/'
         tags: ['controller.service_arguments']
 

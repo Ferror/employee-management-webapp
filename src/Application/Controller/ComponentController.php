@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace App\Application\Controller;
+namespace Application\Controller;
 
-use App\Domain\Sidebar\Logo;
-use App\Domain\Sidebar\Sidebar;
+use Domain\Sidebar\Logo;
+use Domain\Sidebar\Sidebar;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
