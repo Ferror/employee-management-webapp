@@ -47,7 +47,7 @@ function post(route, data) {
 
     request.open('POST', route, true);
     request.setRequestHeader('Content-Type', 'application/json');
-    request.onload =  function () {
+    request.onload = function () {
         if (request.response.code === 200) {
 
         }
