@@ -9,7 +9,7 @@
     <body>
         {{ render(
             controller(
-                'App\\Application\\Controller\\ComponentController::sidebar',
+                'Application\\Controller\\ComponentController::sidebar',
                 { 'path': app.request.pathInfo }
             )
         ) }}
